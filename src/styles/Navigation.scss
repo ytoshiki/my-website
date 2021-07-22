@@ -1,0 +1,17 @@
+.navigation {
+  padding: 2rem 2rem;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__item {
+    list-style: none;
+    width: 1.7rem;
+    &:not(:last-child) {
+      margin-right: 1.4rem;
+    }
+  }
+}

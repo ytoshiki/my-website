@@ -1,0 +1,67 @@
+.top {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 6rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid #ddd;
+
+  &__left {
+    width: 50%;
+  }
+
+  &__name {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+
+    span {
+      transition: all ease 0.3s;
+      position: relative;
+      padding-left: 0.3rem;
+      display: inline-block;
+    }
+    &:hover {
+      span {
+        transform: rotate(15deg);
+      }
+    }
+  }
+
+  &__sub-title {
+    font-size: 2.2rem;
+    margin-bottom: 1.8rem;
+    display: inline-block;
+    background: linear-gradient(transparent 60%, #ff6 60%);
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    span {
+      position: relative;
+      display: inline-block;
+      padding-right: 2rem;
+      transition: all ease 0.2s;
+    }
+
+    &:hover {
+      span {
+        transform: translateX(1rem);
+      }
+    }
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+  &__right {
+    width: 50%;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 30rem;
+  }
+}
