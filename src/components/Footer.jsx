@@ -8,18 +8,22 @@ const Footer = () => {
           <div className='footer__left'>
             <span>
               Designed and developled by{' '}
-              <a href='/' target='_blank'>
+              <a href='https://github.com/ytoshiki' target='_blank' rel='noreferrer'>
                 Toshiki Yoshioka
               </a>
               .
             </span>
             <span>
               Built with{' '}
-              <a href='/' target='_blank'>
+              <a href='https://reactjs.org/' target='_blank' rel='noreferrer'>
                 React
               </a>
-              . Hosted on <a href='/'>netlify</a>. See{' '}
-              <a href='/' target='_blank'>
+              . Hosted on{' '}
+              <a href='https://www.netlify.com/' target='_blank' rel='noreferrer'>
+                netlify
+              </a>
+              . See{' '}
+              <a href='https://github.com/ytoshiki/my-website' target='_blank' rel='noreferrer'>
                 source code
               </a>
               .

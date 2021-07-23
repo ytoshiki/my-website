@@ -65,7 +65,7 @@ const ProjectList = () => {
               </li>
             </ul>
           </div>
-          <button className='projects__button'>Preview</button>
+          <button className='projects__button'>Learn More</button>
         </div>
       </li>
       <li className='projects__item'>
@@ -119,7 +119,7 @@ const ProjectList = () => {
               </li>
             </ul>
           </div>
-          <button className='projects__button'>Preview</button>
+          <button className='projects__button'>Learn More</button>
         </div>
       </li>
       <li className='projects__item'>
@@ -171,7 +171,7 @@ const ProjectList = () => {
               </li>
             </ul>
           </div>
-          <button className='projects__button'>Preview</button>
+          <button className='projects__button'>Learn More</button>
         </div>
       </li>
       <li className='projects__item'>
@@ -203,7 +203,7 @@ const ProjectList = () => {
               </li>
             </ul>
           </div>
-          <button className='projects__button'>Preview</button>
+          <button className='projects__button'>Learn More</button>
         </div>
       </li>
     </ul>

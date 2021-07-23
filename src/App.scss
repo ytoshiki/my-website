@@ -34,6 +34,10 @@ body {
   max-width: 80rem;
   margin: auto;
   overflow: hidden;
+
+  @media screen and (max-width: 1040px) {
+    padding: 0 0.8rem;
+  }
 }
 
 img {

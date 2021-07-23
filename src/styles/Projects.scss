@@ -1,11 +1,22 @@
 .projects {
   padding-top: 10rem;
   padding-bottom: 10rem;
+
+  @media screen and (max-width: 1040px) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
   &__title {
     text-align: center;
     font-size: 1.4rem;
     color: #a9a9a9;
     margin-bottom: 4rem;
+
+    @media screen and (max-width: 1040px) {
+      font-size: 1.3rem;
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__content {
@@ -23,20 +34,47 @@
       padding-bottom: 6rem;
       border-bottom: 1px solid #ddd;
       margin-bottom: 6rem;
+
+      @media screen and (max-width: 780px) {
+        padding-bottom: 5rem;
+        margin-bottom: 5rem;
+      }
     }
 
     &-img {
       width: 48%;
+
+      @media screen and (max-width: 780px) {
+        width: 100%;
+        max-width: 30rem;
+
+        margin: auto;
+      }
     }
 
     &-texts {
       width: 48%;
+
+      @media screen and (max-width: 780px) {
+        width: 100%;
+        margin-top: 2rem;
+      }
     }
 
     &-title {
       font-size: 2rem;
       margin-bottom: 1.5rem;
       line-height: 1.6;
+      padding-top: 1rem;
+
+      @media screen and (max-width: 1040px) {
+        font-size: 1.6rem;
+      }
+
+      @media screen and (max-width: 780px) {
+        font-size: 1.4rem;
+        line-height: 1.25;
+      }
 
       span {
         font-size: 1.3rem;
@@ -48,9 +86,25 @@
       font-size: 1.5rem;
       margin-bottom: 2rem;
 
+      @media screen and (max-width: 1040px) {
+        font-size: 1.3rem;
+      }
+
+      @media screen and (max-width: 780px) {
+        font-size: 1.2rem;
+      }
+
       &.is-sm {
         font-size: 1.3rem;
         overflow: hidden;
+
+        @media screen and (max-width: 1040px) {
+          font-size: 1.2rem;
+        }
+
+        @media screen and (max-width: 780px) {
+          font-size: 1.1rem;
+        }
 
         span {
           display: inline-block;
@@ -71,7 +125,7 @@
     }
 
     &-option {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
 
     &-list {
@@ -80,6 +134,10 @@
       margin-top: 1rem;
       li {
         width: 2.2rem;
+
+        @media screen and (max-width: 1040px) {
+          width: 1.6rem;
+        }
         &:not(:last-child) {
           margin-right: 1.5rem;
         }
@@ -90,9 +148,14 @@
   &__button {
     border: none;
     font-size: 1rem;
-    background: #5b43d6;
-    color: #fff;
-    border-radius: 100px;
-    padding: 0.75rem 2rem;
+    font-family: inherit;
+    // background: #5b43d6;
+    border: 1.25px solid rgb(17, 17, 17);
+
+    background: none;
+    display: block;
+    margin: auto;
+
+    padding: 0.75rem 3rem;
   }
 }

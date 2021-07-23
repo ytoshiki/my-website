@@ -1,4 +1,3 @@
-import NavigationItem from './NavigationItem';
 import IconLinkedIn from '../assets/linkedIn.svg';
 import IconGithub from '../assets/github.svg';
 
@@ -13,7 +12,7 @@ const NavigationList = () => {
         </a>
       </li>
       <li className='navigation__item'>
-        <a href='https://github.com/ytoshiki' target='_blank' rel='noreferrer'>
+        <a href='https://www.linkedin.com/in/toshikiyoshioka' target='_blank' rel='noreferrer'>
           <span className='navigation__item-img'>
             <img src={IconLinkedIn} alt='' />
           </span>

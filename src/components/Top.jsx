@@ -1,4 +1,5 @@
 import TopImage from '../assets/img-top.png';
+import ImgJs from '../assets/js.png';
 
 import '../styles/Top.scss';
 
@@ -12,9 +13,13 @@ const Top = () => {
             <br></br>
             I'm Toshiki Yoshioka
           </h1>
-          <p className='top__title'>Junior front-end developer who loves building things for the web.</p>
-          <span className='top__sub-title'>Projects</span>
-          <span className='top__sub-title'>About</span>
+          <p className='top__title'>
+            Junior front-end developer |{' '}
+            <span>
+              <img src={ImgJs} alt='' /> enthusiast
+            </span>{' '}
+            who loves building things for the web.
+          </p>
         </div>
         <div className='top__right'>
           <div className='top__image'>
