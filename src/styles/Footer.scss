@@ -1,0 +1,38 @@
+.footer {
+  padding: 2rem 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__left {
+    span {
+      display: block;
+      font-size: 0.8rem;
+    }
+  }
+
+  &__right {
+    span {
+      font-size: 0.75rem;
+    }
+
+    a {
+      color: #000;
+      display: inline-block;
+      border-bottom: 1px solid #ddd;
+    }
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    width: 1.25rem;
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+}

@@ -8,6 +8,8 @@ import ImgTypescript from '../assets/typescript.png';
 import ImgScss from '../assets/sass.png';
 import ImgNode from '../assets/node-js.png';
 import ImgExpress from '../assets/express.png';
+import ImgMongo from '../assets/mongodb.png';
+import ImgNext from '../assets/nextjs.png';
 
 const ProjectList = () => {
   return (
@@ -54,6 +56,11 @@ const ProjectList = () => {
               <li>
                 <span>
                   <img src={ImgExpress} alt='' />
+                </span>
+              </li>
+              <li>
+                <span>
+                  <img src={ImgMongo} alt='' />
                 </span>
               </li>
             </ul>
@@ -105,6 +112,11 @@ const ProjectList = () => {
                   <img src={ImgExpress} alt='' />
                 </span>
               </li>
+              <li>
+                <span>
+                  <img src={ImgMongo} alt='' />
+                </span>
+              </li>
             </ul>
           </div>
           <button className='projects__button'>Preview</button>
@@ -152,6 +164,11 @@ const ProjectList = () => {
                   <img src={ImgExpress} alt='' />
                 </span>
               </li>
+              <li>
+                <span>
+                  <img src={ImgMongo} alt='' />
+                </span>
+              </li>
             </ul>
           </div>
           <button className='projects__button'>Preview</button>
@@ -172,6 +189,11 @@ const ProjectList = () => {
               <li>
                 <span>
                   <img src={ImgReact} alt='' />
+                </span>
+              </li>
+              <li>
+                <span>
+                  <img src={ImgNext} alt='' />
                 </span>
               </li>
               <li>
