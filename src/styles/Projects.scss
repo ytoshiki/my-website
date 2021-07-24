@@ -149,13 +149,14 @@
     border: none;
     font-size: 1rem;
     font-family: inherit;
-    // background: #5b43d6;
-    border: 1.25px solid rgb(17, 17, 17);
-
+    color: #000;
+    border: 1.25px solid #000;
     background: none;
     display: block;
     margin: auto;
-
-    padding: 0.75rem 3rem;
+    text-align: center;
+    padding: 0.75rem 0;
+    width: 100%;
+    max-width: 10rem;
   }
 }

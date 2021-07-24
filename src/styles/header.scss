@@ -1,0 +1,12 @@
+.header {
+  &-link {
+    font-size: 0.75rem;
+    color: #000;
+    margin: 1rem 2rem;
+    display: inline-block;
+
+    img {
+      width: 1.5rem;
+    }
+  }
+}

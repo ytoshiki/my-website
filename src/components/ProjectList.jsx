@@ -10,6 +10,7 @@ import ImgNode from '../assets/node-js.png';
 import ImgExpress from '../assets/express.png';
 import ImgMongo from '../assets/mongodb.png';
 import ImgNext from '../assets/nextjs.png';
+import { Link } from 'react-router-dom';
 
 const ProjectList = () => {
   return (
@@ -65,7 +66,9 @@ const ProjectList = () => {
               </li>
             </ul>
           </div>
-          <button className='projects__button'>Learn More</button>
+          <Link className='projects__button' to='/w-cms'>
+            Learn More
+          </Link>
         </div>
       </li>
       <li className='projects__item'>
