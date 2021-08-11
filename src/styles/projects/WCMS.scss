@@ -144,6 +144,12 @@
           display: block;
           padding-top: 640/1200 * 100%;
         }
+
+        &.is-lg {
+          &:before {
+            padding-top: 800/1200 * 100%;
+          }
+        }
       }
 
       .swiper-pagination {

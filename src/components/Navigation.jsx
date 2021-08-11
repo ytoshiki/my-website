@@ -3,11 +3,11 @@ import '../styles/Navigation.scss';
 
 const Navigation = () => {
   return (
-    <nav className='navigation'>
-      <div className='l-container'>
+    <div className='l-container'>
+      <nav className='navigation'>
         <NavigationList />
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 };
 
