@@ -3,7 +3,7 @@
   padding-bottom: 10rem;
 
   @media screen and (max-width: 1040px) {
-    padding-top: 6rem;
+    padding-top: 4rem;
     padding-bottom: 6rem;
   }
 
@@ -14,8 +14,7 @@
     margin-bottom: 4rem;
 
     @media screen and (max-width: 1040px) {
-      font-size: 1.3rem;
-      margin-bottom: 2.4rem;
+      font-size: 1rem;
     }
 
     span {
@@ -53,8 +52,8 @@
       @media screen and (max-width: 780px) {
         width: 100%;
         max-width: 30rem;
-
         margin: auto;
+        padding: 0 1rem;
       }
     }
 
@@ -73,17 +72,17 @@
       line-height: 1.6;
       padding-top: 1rem;
 
-      @media screen and (max-width: 1040px) {
-        font-size: 1.6rem;
-      }
-
       @media screen and (max-width: 780px) {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         line-height: 1.25;
       }
 
       span {
         font-size: 1.2rem;
+
+        @media screen and (max-width: 780px) {
+          font-size: 1rem;
+        }
       }
     }
 
@@ -92,16 +91,16 @@
       font-size: 1.1rem;
       margin-bottom: 2rem;
 
-      // @media screen and (max-width: 1040px) {
-      //   font-size: 1.3rem;
-      // }
-
-      // @media screen and (max-width: 780px) {
-      //   font-size: 1.2rem;
-      // }
+      @media screen and (max-width: 780px) {
+        font-size: 0.95rem;
+      }
 
       &.is-sm {
         font-size: 1rem;
+
+        @media screen and (max-width: 780px) {
+          font-size: 0.85rem;
+        }
         overflow: hidden;
 
         span {
@@ -124,6 +123,10 @@
 
     &-option {
       margin-bottom: 5rem;
+
+      @media screen and (max-width: 780px) {
+        margin-bottom: 3rem;
+      }
     }
 
     &-list {
@@ -134,10 +137,14 @@
         width: 1.5rem;
 
         @media screen and (max-width: 1040px) {
-          width: 1.6rem;
+          width: 1.2rem;
         }
         &:not(:last-child) {
           margin-right: 1.5rem;
+
+          @media screen and (max-width: 780px) {
+            margin-right: 1rem;
+          }
         }
       }
     }
@@ -156,5 +163,11 @@
     padding: 0.75rem 0;
     width: 100%;
     max-width: 13rem;
+
+    @media screen and (max-width: 780px) {
+      padding: 0.5rem 0;
+      max-width: 10rem;
+      font-size: 0.9rem;
+    }
   }
 }

@@ -29,75 +29,82 @@ const pageTopSources = {
 
 const technologyFront = [
   {
-    head: 'Language',
+    head: '言語',
     data: ['Typescript']
   },
   {
-    head: 'Framework',
+    head: 'フレームワーク',
     data: ['React']
   },
   {
-    head: 'State management',
+    head: '状態管理',
     data: ['Redux']
   },
   {
-    head: 'Style',
+    head: 'スタイル',
     data: ['scss']
   }
 ];
 
 const technologyBack = [
   {
-    head: 'Language',
+    head: '言語',
     data: ['Typescript', 'Node']
   },
   {
-    head: 'Framework',
+    head: 'フレームワーク',
     data: ['Express']
   },
   {
-    head: 'Database',
+    head: 'データベース',
     data: ['mongodb']
   },
   {
-    head: 'Auth',
+    head: '認証',
     data: ['JWT']
   }
 ];
 
-const WEC = () => {
+const WECJP = () => {
   const pageTopDescription = (
     <p className='wcms__top-para'>
-      Virtual e-commerce site. All the products and categories are managed on <Link to='/'>W </Link>.
+      ECサイト。カテゴリー及び商品は別アプリ<Link to='/'>(W)</Link>からAPIで登録・所得が可能。
     </p>
   );
 
   const point01Description = (
     <div className='wcms__points-description'>
-      You can do the following things which I think are common functionalities for a typical e-commerce site.
+      一般的なECサイトにある以下のような機能が行えます
       <br />
       <br />
       <ul>
-        <li>1. Seaching products</li>
-        <li>2. Add to cart</li>
-        <li>3. Sorting products</li>
+        <li>1. 商品の検索</li>
+        <li>2. カートの操作</li>
+        <li>3. 商品の並び替え</li>
       </ul>
       <br />
-      <br />I used React Hooks and Redux for state management to avoid unnecessary api calls to implement those functionalities.
+      <br />
+      それらを実行する際に、不必要なAPIのやりとりを防ぐためにReact HooksとReduxを用いて状態管理をしています。
     </div>
   );
 
-  const point02Description = <div className='wcms__points-description'>You can also write a review to the product you have purchased. You can't actually purchase the product, but once you click the purchase button, the user icon on the top right corner will take you to the review page where you can write and edit your review.</div>;
+  const point02Description = (
+    <div className='wcms__points-description'>
+      購入した商品のレビューを書くことができます。実際に購入することはできませんが、ログインした状態で購入ボタンを押すと、画面右上のユーザーアイコンからレビューのページへ飛べます。
+      <br />
+      そこから商品のレビューの追加、編集が行えます。
+    </div>
+  );
 
   const point03Description = (
     <div className='wcms__points-description'>
-      JWT is used for user authentication and authrorization.
+      JWTを用いてユーザー認証を行っています。
       <br />
       <br />
-      To purchase products, you need to register an account, and your account information is also required for reviewing products.
+      商品を購入するには、アカウントの登録が必要です。そのアカウントの情報が商品のレビューに必要になります。
       <br />
       <br />
-      You can use the following infomation to sign in as a guest user
+      ゲストユーザーとしてログインするには以下のアカウント情報をご利用ください。
       <br />
       <br />
       <ul>
@@ -111,20 +118,20 @@ const WEC = () => {
 
   return (
     <FadeIn>
-      <Header hasParent={true} />
+      <Header hasParent={true} lang='/jp' />
       <div className='l-container'>
-        <div className='wcms'>
-          <PageTop title='W (e-commerce site)' description={pageTopDescription} sources={pageTopSources} image={ImgTop} />
-          <Technology front={technologyFront} back={technologyBack} />
+        <div className='wcms lang-jp'>
+          <PageTop title='W (ECサイト)' description={pageTopDescription} sources={pageTopSources} image={ImgTop} lang='jp' />
+          <Technology front={technologyFront} back={technologyBack} lang='jp' />
           <div className='wcms__block is-bg'>
-            <h2 className='wcms__block-title'>Functionalities</h2>
+            <h2 className='wcms__block-title'>機能</h2>
             <div className='wcms__points'>
-              <PointBlock title='Basic Functionalities' description={point01Description} slideImages={basicImgs} size='is-lg' />
-              <PointBlock title='Product Review' description={point02Description} slideImages={reviewImgs} size='is-lg' />
-              <PointBlock title='Authentication' description={point03Description} slideImages={authImgs} size='is-lg' />
+              <PointBlock title='ECサイトの基本操作' description={point01Description} slideImages={basicImgs} size='is-lg' />
+              <PointBlock title='商品レビュー' description={point02Description} slideImages={reviewImgs} size='is-lg' />
+              <PointBlock title='ユーザー認証' description={point03Description} slideImages={authImgs} size='is-lg' />
             </div>
           </div>
-          <VisitButton url='https://w-ec.netlify.app/' target='_blank' rel='noreferrer' />
+          <VisitButton url='https://w-ec.netlify.app/' target='_blank' rel='noreferrer' lang='jp' />
         </div>
       </div>
       <Footer />
@@ -132,4 +139,4 @@ const WEC = () => {
   );
 };
 
-export default WEC;
+export default WECJP;

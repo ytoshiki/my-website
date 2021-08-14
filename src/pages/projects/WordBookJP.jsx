@@ -1,12 +1,10 @@
 import ImgTop from '../../assets/img-project-03.png';
 import '../../styles/projects/WCMS.scss';
-// import ImgAuth from '../../assets/projects/wordbook/img-wordbook-auth.jpg';
 import ImgSave from '../../assets/projects/wordbook/img-wordbook-save.jpg';
 import ImgList from '../../assets/projects/wordbook/img-wordbook-list.jpg';
 import ImgTest from '../../assets/projects/wordbook/img-wordbook-test.jpg';
 import ImgSearch from '../../assets/projects/wordbook/img-wordbook-search.jpg';
 import ImgAuth from '../../assets/projects/wordbook/img-wordbook-auth.jpg';
-import { Link } from 'react-router-dom';
 import PageTop from '../../components/projects/PageTop';
 import Technology from '../../components/projects/Technology';
 import VisitButton from '../../components/projects/VisitButton';
@@ -15,7 +13,6 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import FadeIn from '../../components/animation/FadeIn';
 
-// const authImgs = [ImgAuth];
 const basicImgs = [ImgSave, ImgList, ImgTest];
 const searchImgs = [ImgSearch];
 const authImgs = [ImgAuth];
@@ -28,66 +25,67 @@ const pageTopSources = {
 
 const technologyFront = [
   {
-    head: 'Language',
+    head: '言語',
     data: ['Typescript']
   },
   {
-    head: 'Framework',
+    head: 'フレームワーク',
     data: ['React']
   },
   {
-    head: 'State management',
+    head: '状態管理',
     data: ['Redux']
   },
   {
-    head: 'Style',
+    head: 'スタイル',
     data: ['scss']
   }
 ];
 
 const technologyBack = [
   {
-    head: 'Language',
+    head: '言語',
     data: ['Typescript', 'Node']
   },
   {
-    head: 'Framework',
+    head: 'フレームワーク',
     data: ['Express']
   },
   {
-    head: 'Database',
+    head: 'データベース',
     data: ['mongodb']
   },
   {
-    head: 'Auth',
+    head: '認証',
     data: ['JWT']
   }
 ];
 
-const WordBook = () => {
-  const pageTopDescription = <p className='wcms__top-para'>A platform for English learners where people can search for a word, make their own word book, and test their vocab.</p>;
+const WordBookJP = () => {
+  const pageTopDescription = <p className='wcms__top-para'>英語学習者向けのアプリ。単語の意味・画像の検索が可能。単語帳を作ってテストができる。</p>;
 
   const point01Description = (
     <div className='wcms__points-description'>
-      You can search for words and images from the search bar at the top of the page.
+      ページ上部の検索バーから単語の意味と画像の検索が可能です。
       <br />
       <br />
-      I used the following APIs to implement it:
+      以下のAPIを使用して実行しました。
       <br />
       <br />
       <ul>
         <li>
-          Definitions:{' '}
+          辞書:{' '}
           <a href='https://developer.wordnik.com/' target='_blank' rel='noreferrer'>
             Wordnik API
           </a>
-          ,
+          <span>(本番環境)</span>,
           <a href='https://owlbot.info/' target='_blank' rel='noreferrer'>
             Owlbot Dictionary API
           </a>
+          <span>(開発環境)</span>
         </li>
         <li>
-          Images:{' '}
+          画像:{' '}
           <a href='https://pixabay.com/' target='_blank' rel='noreferrer'>
             Pixabay API
           </a>
@@ -98,10 +96,10 @@ const WordBook = () => {
 
   const point02Description = (
     <div className='wcms__points-description'>
-      Once you register an account, you can create your own Wordbook from the bottom of the top page.
+      アカウントの登録後、画面下部から単語帳の作成が可能です。
       <br />
       <br />
-      you can see your wordbook from the left side of the screen. You can also take a test.
+      作成した単語帳は画面左側「Word list」に反映されます。さらに上部の「Start Quizes」からその単語帳のテストを受けることもできます。 （スライド参照）
     </div>
   );
 
@@ -111,13 +109,13 @@ const WordBook = () => {
       <a href='https://jwt.io/' target='_blank' rel='noreferrer'>
         JWT
       </a>{' '}
-      is used for user authentication and authrorization.
+      を用いてユーザー認証をしています。
       <br />
       <br />
-      To use the Wordbook feature, you need to register for an account.
+      単語帳の機能を使うには、アカウントの登録が必要です。
       <br />
       <br />
-      You can use the following information to sign in as a guest user:
+      以下のアカウントでゲストユーザーとしてログインができます。
       <br />
       <br />
       <ul>
@@ -129,21 +127,21 @@ const WordBook = () => {
 
   return (
     <FadeIn>
-      <Header hasParent={true} />
+      <Header hasParent={true} lang='/jp' />
 
       <div className='l-container'>
-        <div className='wcms'>
-          <PageTop title='W (e-commerce site)' description={pageTopDescription} sources={pageTopSources} image={ImgTop} />
-          <Technology front={technologyFront} back={technologyBack} />
+        <div className='wcms lang-jp'>
+          <PageTop title='WordBook D' description={pageTopDescription} sources={pageTopSources} image={ImgTop} lang='jp' />
+          <Technology front={technologyFront} back={technologyBack} lang='jp' />
           <div className='wcms__block is-bg'>
-            <h2 className='wcms__block-title'>Functionalities</h2>
+            <h2 className='wcms__block-title'>機能</h2>
             <div className='wcms__points'>
-              <PointBlock title='Search for words' description={point01Description} slideImages={searchImgs} size='is-lg' />
-              <PointBlock title='Save words and test them' description={point02Description} slideImages={basicImgs} size='is-lg' />
-              <PointBlock title='Authentication' description={point03Description} slideImages={authImgs} size='is-lg' />
+              <PointBlock title='単語検索' description={point01Description} slideImages={searchImgs} size='is-lg' />
+              <PointBlock title='単語の保存/テスト' description={point02Description} slideImages={basicImgs} size='is-lg' />
+              <PointBlock title='ユーザー認証' description={point03Description} slideImages={authImgs} size='is-lg' />
             </div>
           </div>
-          <VisitButton url='https://wordbookd.netlify.app/' target='_blank' rel='noreferrer' />
+          <VisitButton url='https://wordbookd.netlify.app/' target='_blank' rel='noreferrer' lang='jp' />
         </div>
       </div>
       <Footer />
@@ -151,4 +149,4 @@ const WordBook = () => {
   );
 };
 
-export default WordBook;
+export default WordBookJP;

@@ -1,10 +1,10 @@
 import { v4 as uuidv4 } from 'uuid';
 
-const Technology = ({ front, back }) => {
+const Technology = ({ front, back, lang = '' }) => {
   const renderFront = () =>
     front && (
       <div className='wcms__block-content'>
-        <h3>Front-end</h3>
+        <h3>{lang === 'jp' ? 'フロントエンド' : 'Front-end'}</h3>
         {front.map((data) => {
           return (
             <div key={uuidv4()}>
@@ -23,7 +23,7 @@ const Technology = ({ front, back }) => {
   const renderBack = () =>
     back && (
       <div className='wcms__block-content'>
-        <h3>Back-end</h3>{' '}
+        <h3>{lang === 'jp' ? 'バックエンド' : 'Back-end'}</h3>{' '}
         {back.map((data) => {
           return (
             <div key={uuidv4()}>
@@ -41,7 +41,7 @@ const Technology = ({ front, back }) => {
 
   return (
     <div className='wcms__block'>
-      <h2 className='wcms__block-title'>Technologies</h2>
+      <h2 className='wcms__block-title'>{lang === 'jp' ? 'テクノロジー' : 'Technologies'}</h2>
       <div className='wcms__block-wrapper'>
         {renderFront()}
 

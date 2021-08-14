@@ -3,24 +3,53 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     padding: 2rem 0 10rem;
+
+    @media screen and (max-width: 780px) {
+      flex-direction: column;
+      padding: 2rem 0 8rem;
+    }
 
     &-texts {
       width: 40%;
+
+      @media screen and (max-width: 780px) {
+        width: 100%;
+        order: 2;
+      }
     }
 
     &-img {
       width: 40%;
       margin-left: 2rem;
+
+      @media screen and (max-width: 780px) {
+        width: 100%;
+        max-width: 500px;
+        padding: 0 1rem;
+        margin-left: 0;
+        order: 1;
+        margin-bottom: 2rem;
+      }
     }
 
     &-title {
       margin-bottom: 2rem;
       font-size: 1.3rem;
+
+      @media screen and (max-width: 780px) {
+        font-size: 1.1rem;
+        margin-bottom: 1.4rem;
+      }
     }
 
     &-para {
       font-size: 1.2rem;
+
+      @media screen and (max-width: 780px) {
+        font-size: 0.95rem;
+      }
       a {
         color: rgb(114, 114, 114);
       }
@@ -32,6 +61,10 @@
 
     &-option {
       font-size: 1rem;
+
+      @media screen and (max-width: 780px) {
+        font-size: 0.85rem;
+      }
 
       a {
         border-bottom: 2px solid #000;
@@ -51,6 +84,10 @@
       &-title {
         min-width: 7rem;
         display: inline-block;
+
+        @media screen and (max-width: 780px) {
+          min-width: 6rem;
+        }
       }
     }
   }
@@ -63,6 +100,11 @@
       font-size: 1.6rem;
       margin-bottom: 4rem;
       text-align: center;
+
+      @media screen and (max-width: 780px) {
+        font-size: 1.2rem;
+        margin-bottom: 3rem;
+      }
     }
     &-wrapper {
       display: flex;
@@ -71,11 +113,19 @@
     &-content {
       &:first-child {
         margin-right: 6rem;
+
+        @media screen and (max-width: 780px) {
+          margin-right: 3rem;
+        }
       }
       span {
         font-size: 1rem;
         font-weight: bold;
         color: rgb(114, 114, 114);
+
+        @media screen and (max-width: 780px) {
+          font-size: 0.85rem;
+        }
       }
 
       ul {
@@ -84,11 +134,19 @@
 
       li {
         font-size: 1rem;
+
+        @media screen and (max-width: 780px) {
+          font-size: 0.85rem;
+        }
       }
     }
     h3 {
       font-size: 1.4rem;
       margin-bottom: 1rem;
+
+      @media screen and (max-width: 780px) {
+        font-size: 1rem;
+      }
     }
 
     &.is-bg {
@@ -99,6 +157,10 @@
   &__points {
     &-block {
       margin-bottom: 8rem;
+
+      @media screen and (max-width: 780px) {
+        margin-bottom: 6rem;
+      }
     }
 
     &-title {
@@ -108,14 +170,24 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      &:not(:first-child) {
-        margin-top: 4rem;
+      margin-top: 4rem;
+
+      @media screen and (max-width: 780px) {
+        align-items: center;
+        flex-direction: column;
+        margin-top: 2rem;
       }
     }
 
     &-description {
       width: 48%;
       font-size: 1rem;
+
+      @media screen and (max-width: 780px) {
+        width: 100%;
+        order: 2;
+        font-size: 0.85rem;
+      }
 
       &.is-wide {
         width: 100%;
@@ -124,6 +196,12 @@
 
     &-slider {
       width: 50%;
+
+      @media screen and (max-width: 780px) {
+        width: 100%;
+        order: 1;
+        margin-bottom: 2rem;
+      }
 
       .swiper-slide {
       }
@@ -165,6 +243,11 @@
     &-images {
       width: 50%;
 
+      @media screen and (max-width: 780px) {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+
       img {
         &:not(:first-child) {
           margin-top: 1rem;
@@ -175,6 +258,10 @@
 
   &__bottom {
     padding: 4rem 0 8rem;
+
+    @media screen and (max-width: 780px) {
+      padding: 0 0 6rem;
+    }
 
     &-buttons {
       display: flex;
@@ -187,6 +274,11 @@
       padding: 0.75rem 4rem;
       font-size: 1.25rem;
       border: 1px solid #000;
+
+      @media screen and (max-width: 780px) {
+        padding: 0.5rem 3rem;
+        font-size: 0.9rem;
+      }
     }
   }
 }

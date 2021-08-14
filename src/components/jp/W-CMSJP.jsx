@@ -25,41 +25,37 @@ const dataValidationImgs = [BgValOne, BgValTwo];
 
 SwiperCore.use([Navigation, Pagination]);
 
-const WCMS = () => {
+const WCMSJP = () => {
   return (
     <FadeIn>
-      <Header hasParent={true} />
+      <Header hasParent={true} lang='/jp' />
 
       <div className='l-container'>
-        <div className='wcms'>
+        <div className='wcms lang-jp'>
           <div className='wcms__top'>
             <div className='wcms__top-texts'>
-              <h1 className='wcms__top-title'>W (content management system & data visualization)</h1>
+              <h1 className='wcms__top-title'>W (コンテンツ管理/データのグラフ化 )</h1>
               <p className='wcms__top-para'>
-                A platform for visualizing data collection and editing products and categories on{' '}
-                <Link to='/' target='/' rel='noreferrer'>
-                  W (EC site)
-                </Link>
-                .
+                <Link to='/'>W(ECサイト)</Link>のコンテンツ管理、及び利用者・商品・売り上げのデータ化。
               </p>
               <div className='wcms__top-options'>
                 <div className='wcms__top-option'>
-                  <span className='wcms__top-option-title'>demo:</span>
+                  <span className='wcms__top-option-title'>デモ:</span>
 
                   <a href='https://pf-customer-data-client.vercel.app/login' target='/' rel='noreferrer'>
-                    Visit site
+                    サイトを見る
                   </a>
                 </div>
                 <div className='wcms__top-option'>
-                  <span className='wcms__top-option-title'>source code:</span>
+                  <span className='wcms__top-option-title'>ソースコード:</span>
 
                   <span className='wcms__top-option-sub'>
                     <a href='https://github.com/ytoshiki/pf__customer-data-client' target='/' rel='noreferrer'>
-                      front-end
+                      フロントエンド
                     </a>
 
                     <a href='https://github.com/ytoshiki/pf__customer-data-server' target='/' rel='noreferrer'>
-                      back-end
+                      バックエンド
                     </a>
                   </span>
                 </div>
@@ -70,43 +66,43 @@ const WCMS = () => {
             </div>
           </div>
           <div className='wcms__block'>
-            <h2 className='wcms__block-title'>Technologies</h2>
+            <h2 className='wcms__block-title'>テクノロジー</h2>
             <div className='wcms__block-wrapper'>
               <div className='wcms__block-content'>
-                <h3>Front-end</h3>
-                <span>Language</span>
+                <h3>フロントエンド</h3>
+                <span>言語</span>
                 <ul>
                   <li>Typescript</li>
                 </ul>
-                <span>Framework</span>
+                <span>フレームワーク</span>
                 <ul>
                   <li>React</li>
                 </ul>
-                <span>State management</span>
+                <span>状態管理</span>
                 <ul>
                   <li>Redux</li>
                 </ul>
-                <span>Style</span>
+                <span>スタイル</span>
                 <ul>
                   <li>Scss</li>
                 </ul>
               </div>
               <div className='wcms__block-content'>
-                <h3>Back-end</h3>
-                <span>Language</span>
+                <h3>バックエンド</h3>
+                <span>言語</span>
                 <ul>
                   <li>Typescript</li>
                   <li>Node</li>
                 </ul>
-                <span>Framework</span>
+                <span>フレームワーク</span>
                 <ul>
                   <li>Express</li>
                 </ul>
-                <span>Database</span>
+                <span>データベース</span>
                 <ul>
                   <li>Mongodb</li>
                 </ul>
-                <span>Auth</span>
+                <span>認証</span>
                 <ul>
                   <li>JWT</li>
                 </ul>
@@ -114,25 +110,25 @@ const WCMS = () => {
             </div>
           </div>
           <div className='wcms__block is-bg'>
-            <h2 className='wcms__block-title'>Functionalities</h2>
+            <h2 className='wcms__block-title'>機能</h2>
             <div className='wcms__points'>
               <div className='wcms__points-block'>
-                <h3 className='wcms__points-title'>Data Visualization</h3>
+                <h3 className='wcms__points-title'>データのグラフ化</h3>
                 <div className='wcms__points-content'>
                   <div className='wcms__points-description'>
-                    Visualize various kinds of information on <Link to='/'>W</Link> which is a virtual EC site.
+                    <Link to='/'>W(仮想ECサイト)</Link>の様々なデータがグラフ化できます。
                     <br />
-                    Here are some examples.
+                    その例として以下のものがあります。
                     <br />
                     <br />
                     <ul>
-                      <li>User information</li>
-                      <li>Sales Comparison</li>
-                      <li>Product Reviews</li>
-                      <li>Customer Satisfaction</li>
+                      <li>利用者情報</li>
+                      <li>売上比較</li>
+                      <li>商品レビュー</li>
+                      <li>顧客満足度</li>
                     </ul>
                     <br />
-                    Some of the graphs are clickable and will take you to a detailed page.
+                    いくつかのグラフはクリックが可能で、さらに詳細ページに飛ぶことも可能です。
                   </div>
                   <div className='wcms__points-slider'>
                     <Swiper tag='section' wrapperTag='ul' slidesPerView={1} navigation pagination spaceBetween={0}>
@@ -149,13 +145,13 @@ const WCMS = () => {
               </div>
 
               <div className='wcms__points-block'>
-                <h3 className='wcms__points-title'>Content Management</h3>
+                <h3 className='wcms__points-title'>コンテンツの管理</h3>
                 <div className='wcms__points-content'>
                   <p className='wcms__points-description'>
-                    You can add, edit, and delete products and categories that are reflected on <Link to='/'>W</Link>.
+                    商品やカテゴリーの追加・編集・削除ができ、別サイトの<Link to='/'>W</Link>に反映されます。
                     <br />
                     <br />
-                    However, if you log in as a demo user, you can add products and categories, but you cannot edit or delete them.
+                    しかし、ゲストユーザーとしてログインする場合（マスター以外）、商品・カテゴリーの追加はできますが、編集・削除をする権限がないため、それらの事はできない仕様になっています。
                   </p>
                   <div className='wcms__points-slider'>
                     <Swiper tag='section' wrapperTag='ul' slidesPerView={1} navigation pagination spaceBetween={0}>
@@ -172,16 +168,16 @@ const WCMS = () => {
               </div>
 
               <div className='wcms__points-block'>
-                <h3 className='wcms__points-title'>Form Validation and Token Based Authorization</h3>
+                <h3 className='wcms__points-title'>フォーム検証/ユーザー認証</h3>
                 <div className='wcms__points-content'>
                   <div className='wcms__points-description'>
-                    The following pages are examples where form validation is implemented
+                    以下のページでフォーム検証がおこなわれています。
                     <br />
                     <br />
                     <ul>
-                      <li>Login / Signin</li>
-                      <li>Adding product / category</li>
-                      <li>Editing product / category</li>
+                      <li>ログイン/サインイン</li>
+                      <li>製品・カテゴリーの追加</li>
+                      <li>製品・カテゴリーの編集</li>
                     </ul>
                   </div>
                   <div className='wcms__points-slider'>
@@ -198,10 +194,10 @@ const WCMS = () => {
                 </div>
                 <div className='wcms__points-content'>
                   <p className='wcms__points-description'>
-                    JWT is used for user authentication and authorization.
+                    ユーザー認証はJWTを使用しています。
                     <br />
                     <br />
-                    It allows only the master user to edit or delete products and categories.
+                    それにより、マスター以外のアカウントでは製品・カテゴリーの編集・削除の制限をしています。
                   </p>
                   <div className='wcms__points-images'>
                     <img src={BgValFour} alt='' />
@@ -211,9 +207,9 @@ const WCMS = () => {
               </div>
 
               <div className='wcms__points-block'>
-                <h3 className='wcms__points-title'>Others...</h3>
+                <h3 className='wcms__points-title'>その他</h3>
                 <div className='wcms__points-content'>
-                  <p className='wcms__points-description is-wide'>Authentication, sorting, pagination, searching, etc...</p>
+                  <p className='wcms__points-description is-wide'>ソート、ページネーション、検索</p>
                 </div>
               </div>
             </div>
@@ -221,7 +217,7 @@ const WCMS = () => {
           <div className='wcms__bottom'>
             <div className='wcms__bottom-buttons'>
               <a href='/' target='_blank' className='wcms__bottom-button'>
-                Visit Site
+                サイトを見る
               </a>
             </div>
           </div>
@@ -232,4 +228,4 @@ const WCMS = () => {
   );
 };
 
-export default WCMS;
+export default WCMSJP;

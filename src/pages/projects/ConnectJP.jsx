@@ -2,8 +2,6 @@ import ImgTop from '../../assets/img-project-04.png';
 import '../../styles/projects/WCMS.scss';
 import ImgCategory from '../../assets/projects/connect/img-connect-category.jpg';
 import ImgLang from '../../assets/projects/connect/img-connect-lang.jpg';
-
-import { Link } from 'react-router-dom';
 import PageTop from '../../components/projects/PageTop';
 import Technology from '../../components/projects/Technology';
 import VisitButton from '../../components/projects/VisitButton';
@@ -21,52 +19,53 @@ const pageTopSources = {
 
 const technologyFront = [
   {
-    head: 'Language',
+    head: '言語',
     data: ['Typescript']
   },
   {
-    head: 'Framework',
+    head: 'フレームワーク',
     data: ['Next.js']
   },
   {
-    head: 'Style',
+    head: 'スタイル',
     data: ['css']
   }
 ];
 
-const Connect = () => {
-  const pageTopDescription = <p className='wcms__top-para'>A platform where people can search for worldwide articles by selecting categories, languages, or keywords.</p>;
+const ConnectJP = () => {
+  const pageTopDescription = <p className='wcms__top-para'>世界中のニュースを集めたアプリ。カテゴリー、言語、キーワードで検索が可能。</p>;
 
   const point01Description = (
     <div className='wcms__points-description'>
-      You can search for news by category from the top page.
+      トップページからはカテゴリーを選択してニュースの絞り込みが可能。
       <br />
       <br />
-      The search icon at the top right of the page leads you to the page where you can search by keyword and language.
+      画面右上の検索アイコンからキーワード、言語の絞り込みが可能なページへ飛ぶことができます。
       <br />
       <br />
-      The news and aritcles are retrieved from{' '}
+      ニュース及び記事は
       <a href='https://currentsapi.services/en' target='_blank' rel='noreferrer'>
         Currents API
       </a>
+      からAPIで所得しています。
     </div>
   );
 
   return (
     <FadeIn>
-      <Header hasParent={true} />
+      <Header hasParent={true} lang='/jp' />
 
       <div className='l-container'>
-        <div className='wcms'>
-          <PageTop title='W (e-commerce site)' description={pageTopDescription} sources={pageTopSources} image={ImgTop} />
-          <Technology front={technologyFront} />
+        <div className='wcms lang-jp'>
+          <PageTop title='THE CONNECT' description={pageTopDescription} sources={pageTopSources} image={ImgTop} lang='jp' />
+          <Technology front={technologyFront} lang='jp' />
           <div className='wcms__block is-bg'>
-            <h2 className='wcms__block-title'>Functionalities</h2>
+            <h2 className='wcms__block-title'>機能</h2>
             <div className='wcms__points'>
-              <PointBlock title='Search By Keyword' description={point01Description} slideImages={searchImgs} size='is-lg' />
+              <PointBlock title='キーワード検索' description={point01Description} slideImages={searchImgs} size='is-lg' />
             </div>
           </div>
-          <VisitButton url='https://pf-newssearch-client.vercel.app/' target='_blank' rel='noreferrer' />
+          <VisitButton url='https://pf-newssearch-client.vercel.app/' target='_blank' rel='noreferrer' lang='jp' />
         </div>
       </div>
       <Footer />
@@ -74,4 +73,4 @@ const Connect = () => {
   );
 };
 
-export default Connect;
+export default ConnectJP;

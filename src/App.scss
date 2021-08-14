@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Rubik:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&display=swap');
 
 * {
   margin: 0;
@@ -34,10 +35,6 @@ body {
   max-width: 80rem;
   margin: auto;
   overflow: hidden;
-
-  @media screen and (max-width: 1040px) {
-    padding: 0 0.8rem;
-  }
 }
 
 img {
@@ -51,4 +48,30 @@ a {
 
 li {
   list-style: none;
+}
+
+.lang-jp {
+  .top {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  .projects {
+    font-family: 'Noto Sans JP', sans-serif;
+
+    &__title {
+      font-family: 'Poppins', sans-serif;
+    }
+  }
+}
+
+.wcms {
+  &.lang-jp {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+}
+
+.header-link {
+  &.lang-jp {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
 }

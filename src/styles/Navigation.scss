@@ -7,7 +7,7 @@
   justify-content: space-between;
 
   @media screen and (max-width: 780px) {
-    padding: 1.75rem 0.8rem;
+    padding: 1.75rem 0;
   }
 
   &__list {
@@ -22,23 +22,31 @@
     color: #000;
     cursor: pointer;
 
-    a:visited {
+    a {
       color: #000;
     }
 
     @media screen and (max-width: 780px) {
-      width: 1.25rem;
+      font-size: 1rem;
+    }
+
+    a:visited {
+      color: #000;
     }
 
     span {
       font-size: 0.9rem;
       color: #adacac;
+
+      @media screen and (max-width: 780px) {
+        font-size: 0.75rem;
+      }
     }
     &:not(:last-child) {
       margin-right: 1rem;
 
       @media screen and (max-width: 780px) {
-        margin-right: 1rem;
+        margin-right: 0.5rem;
       }
     }
   }
@@ -55,9 +63,17 @@
     align-items: center;
     margin-left: 1.25rem;
 
+    @media screen and (max-width: 780px) {
+      margin-left: 0;
+    }
     &-icon {
       font-size: 0.75rem;
       filter: drop-shadow(0 0 0.3rem rgb(199, 199, 199));
+
+      color: #000;
+      @media screen and (max-width: 780px) {
+        font-size: 0.6rem;
+      }
 
       img {
         display: block;
@@ -71,6 +87,10 @@
       // filter: drop-shadow(0 0 0.3rem rgb(255, 0, 0));
 
       margin-left: 1.25rem;
+
+      @media screen and (max-width: 780px) {
+        margin-left: 0.75rem;
+      }
     }
 
     .is-jp {

@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import Jp from '../assets/jp.png';
 import En from '../assets/en.png';
-import { Link as Scroll } from 'react-scroll';
+
+import { Link } from 'react-router-dom';
 
 const NavigationList = () => {
   return (
@@ -17,14 +18,14 @@ const NavigationList = () => {
         }}
       >
         <div className='navigation__lang'>
-          <div className='navigation__lang-icon is-jp'>
+          <Link to='/jp' className='navigation__lang-icon is-jp'>
             <img src={Jp} alt='' />
             日本語
-          </div>
-          <div className='navigation__lang-icon is-en'>
+          </Link>
+          <Link to='/' className='navigation__lang-icon is-en'>
             <img src={En} alt='' />
             English
-          </div>
+          </Link>
         </div>
       </motion.div>
       <ul className='navigation__list'>
@@ -38,10 +39,10 @@ const NavigationList = () => {
             hidden: { opacity: 0, x: 20 }
           }}
         >
-          <Scroll to='projects' spy={true} smooth={true} duration={500}>
-            <span> {'<'}</span>
+          <a href='#projects'>
+            <span> {'<'} </span>
             Projects <span> {'/>'}</span>
-          </Scroll>
+          </a>
         </motion.li>
 
         <motion.li

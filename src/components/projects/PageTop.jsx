@@ -1,4 +1,4 @@
-const PageTop = ({ title, description, sources, image }) => {
+const PageTop = ({ title, description, sources, image, lang = '' }) => {
   return (
     <div className='wcms__top'>
       <div className='wcms__top-texts'>
@@ -6,24 +6,34 @@ const PageTop = ({ title, description, sources, image }) => {
         {description}
         <div className='wcms__top-options'>
           <div className='wcms__top-option'>
-            <span className='wcms__top-option-title'>demo:</span>
+            <span className='wcms__top-option-title'>{lang === 'jp' ? 'デモ:' : 'Demo:'}</span>
 
             <a href={sources.site} target='/' rel='noreferrer'>
-              Visit site
+              {lang === 'jp' ? 'サイトを見る' : 'Visit Site'}
             </a>
           </div>
           <div className='wcms__top-option'>
-            <span className='wcms__top-option-title'>source code:</span>
+            <span className='wcms__top-option-title'>{lang === 'jp' ? 'ソースコード:' : ' Source Code:'}</span>
 
             <span className='wcms__top-option-sub'>
-              {sources.front && (
+              {sources.front && lang === 'jp' && (
                 <a href={sources.front} target='/' rel='noreferrer'>
-                  front-end
+                  フロントエンド
                 </a>
               )}
-              {sources.back && (
+              {sources.front && lang !== 'jp' && (
+                <a href={sources.front} target='/' rel='noreferrer'>
+                  Front-end
+                </a>
+              )}
+              {sources.back && lang === 'jp' && (
                 <a href={sources.back} target='/' rel='noreferrer'>
-                  back-end
+                  バックエンド
+                </a>
+              )}
+              {sources.back && lang !== 'jp' && (
+                <a href={sources.back} target='/' rel='noreferrer'>
+                  Back-end
                 </a>
               )}
             </span>
