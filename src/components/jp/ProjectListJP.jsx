@@ -18,7 +18,7 @@ import InView from 'react-intersection-observer';
 const ProjectListJP = () => {
   return (
     <ul className='projects__list'>
-      <li className='projects__item'>
+      <li className='projects__item' id='w-cms'>
         <InView threshold={0.5} triggerOnce>
           {({ ref, inView }) => (
             <motion.div className='projects__item-inner' ref={ref} initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : { opacity: 0 }} transition={{ duration: 0.6 }}>
@@ -30,7 +30,7 @@ const ProjectListJP = () => {
                   W <span>(コンテンツ管理/データのグラフ化)</span>
                 </h3>
                 <p className='projects__item-text'>
-                  <Link to='/'>W(ECサイト)</Link>のコンテンツ管理、及び利用者・商品・売り上げのデータ化。
+                  <a href='#w-ec'>W(ECサイト)</a>のコンテンツ管理システム。利用者・商品・売り上げのデータ化。
                 </p>
                 <div className='projects__item-option'>
                   <span className='projects__item-text is-sm'>
@@ -82,7 +82,7 @@ const ProjectListJP = () => {
           )}
         </InView>
       </li>
-      <li className='projects__item'>
+      <li className='projects__item' id='w-ec'>
         <InView threshold={0.5} triggerOnce>
           {({ ref, inView }) => (
             <motion.div className='projects__item-inner' ref={ref} initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : { opacity: 0 }} transition={{ duration: 0.6 }}>
@@ -94,7 +94,7 @@ const ProjectListJP = () => {
                   W <span>(ECサイト)</span>
                 </h3>
                 <p className='projects__item-text'>
-                  ECサイト。カテゴリー及び商品は別アプリ<Link to='/'>(W)</Link>からAPIで登録・所得が可能。
+                  ECサイト。カテゴリーと商品は<a href='#w-cms'>W(別プロジェクト)</a>からAPIで登録・所得。
                 </p>
                 <div className='projects__item-option'>
                   <span className='projects__item-text is-sm'>
@@ -155,7 +155,7 @@ const ProjectListJP = () => {
               </div>
               <div className='projects__item-texts'>
                 <h3 className='projects__item-title'>Wordbook D</h3>
-                <p className='projects__item-text'>英語学習者向けのアプリ。単語の意味・画像の検索が可能。単語帳を作ってテストができる。</p>
+                <p className='projects__item-text'>英語学習者向けのアプリ。単語の意味・画像の検索が可能。単語帳を作ったテストが可能。</p>
                 <div className='projects__item-option'>
                   <span className='projects__item-text is-sm'>
                     <span>テクノロジー</span>

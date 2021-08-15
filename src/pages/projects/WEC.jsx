@@ -68,7 +68,11 @@ const technologyBack = [
 const WEC = () => {
   const pageTopDescription = (
     <p className='wcms__top-para'>
-      Virtual e-commerce site. All the products and categories are managed on <Link to='/'>W </Link>.
+      Virtual e-commerce site. Products and categories are managed on{' '}
+      <a href='/w-cms' target='_blank'>
+        W{' '}
+      </a>
+      .
     </p>
   );
 
@@ -78,9 +82,9 @@ const WEC = () => {
       <br />
       <br />
       <ul>
-        <li>1. Seaching products</li>
-        <li>2. Add to cart</li>
-        <li>3. Sorting products</li>
+        <li>Seaching products</li>
+        <li>Add to cart</li>
+        <li>Sorting products</li>
       </ul>
       <br />
       <br />I used React Hooks and Redux for state management to avoid unnecessary api calls to implement those functionalities.
@@ -97,14 +101,12 @@ const WEC = () => {
       To purchase products, you need to register an account, and your account information is also required for reviewing products.
       <br />
       <br />
-      You can use the following infomation to sign in as a guest user
+      You can use the following infomation to sign in as a guest user.
       <br />
       <br />
       <ul>
-        <li>
-          <li>Username: demo</li>
-          <li>Password: password</li>
-        </li>
+        <li>Username: demo</li>
+        <li>Password: password</li>
       </ul>
     </div>
   );

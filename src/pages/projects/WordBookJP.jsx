@@ -119,7 +119,7 @@ const WordBookJP = () => {
       <br />
       <br />
       <ul>
-        <li>Username: admin@gmail.com</li>
+        <li>Email: admin@gmail.com</li>
         <li>Password: password</li>
       </ul>
     </div>

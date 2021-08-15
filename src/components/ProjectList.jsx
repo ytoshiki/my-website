@@ -18,7 +18,7 @@ import InView from 'react-intersection-observer';
 const ProjectList = () => {
   return (
     <ul className='projects__list'>
-      <li className='projects__item'>
+      <li className='projects__item' id='w-cms'>
         <InView threshold={0.5} triggerOnce>
           {({ ref, inView }) => (
             <motion.div className='projects__item-inner' ref={ref} initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : { opacity: 0 }} transition={{ duration: 0.6 }}>
@@ -29,7 +29,9 @@ const ProjectList = () => {
                 <h3 className='projects__item-title'>
                   W <span>(content management system & data visualization)</span>
                 </h3>
-                <p className='projects__item-text'>A platform for automating data collection and reporting throughout teams, operations and supply chains.</p>
+                <p className='projects__item-text'>
+                  A content management system that allows you to add and edit products and categories for <a href='#w-ec'>W</a> (e-commerce site).
+                </p>
                 <div className='projects__item-option'>
                   <span className='projects__item-text is-sm'>
                     <span>Technologies</span>
@@ -80,7 +82,7 @@ const ProjectList = () => {
           )}
         </InView>
       </li>
-      <li className='projects__item'>
+      <li className='projects__item' id='w-ec'>
         <InView threshold={0.5} triggerOnce>
           {({ ref, inView }) => (
             <motion.div className='projects__item-inner' ref={ref} initial={{ opacity: 0 }} animate={inView ? { opacity: 1 } : { opacity: 0 }} transition={{ duration: 0.6 }}>
@@ -91,7 +93,9 @@ const ProjectList = () => {
                 <h3 className='projects__item-title'>
                   W <span>(ecommerce site)</span>
                 </h3>
-                <p className='projects__item-text'>A platform for automating data collection and reporting throughout teams, operations and supply chains.</p>
+                <p className='projects__item-text'>
+                  Virtual e-commerce site. Products and categories are managed on <a href='#w-cms'>W</a>.
+                </p>
                 <div className='projects__item-option'>
                   <span className='projects__item-text is-sm'>
                     <span>Technologies</span>
@@ -151,7 +155,7 @@ const ProjectList = () => {
               </div>
               <div className='projects__item-texts'>
                 <h3 className='projects__item-title'>Wordbook D</h3>
-                <p className='projects__item-text'>A platform for English learners where people can search for a word, make their own word book, and test their vocab.</p>
+                <p className='projects__item-text'>A platform for English learners where people can search for a word, make their own word book, and test their vocabulary.</p>
                 <div className='projects__item-option'>
                   <span className='projects__item-text is-sm'>
                     <span>Technologies</span>

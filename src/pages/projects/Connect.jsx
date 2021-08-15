@@ -58,7 +58,7 @@ const Connect = () => {
 
       <div className='l-container'>
         <div className='wcms'>
-          <PageTop title='W (e-commerce site)' description={pageTopDescription} sources={pageTopSources} image={ImgTop} />
+          <PageTop title='THE CONNECT' description={pageTopDescription} sources={pageTopSources} image={ImgTop} />
           <Technology front={technologyFront} />
           <div className='wcms__block is-bg'>
             <h2 className='wcms__block-title'>Functionalities</h2>

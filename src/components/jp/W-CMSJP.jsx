@@ -34,9 +34,12 @@ const WCMSJP = () => {
         <div className='wcms lang-jp'>
           <div className='wcms__top'>
             <div className='wcms__top-texts'>
-              <h1 className='wcms__top-title'>W (コンテンツ管理/データのグラフ化 )</h1>
+              <h1 className='wcms__top-title'>W (コンテンツ管理)</h1>
               <p className='wcms__top-para'>
-                <Link to='/'>W(ECサイト)</Link>のコンテンツ管理、及び利用者・商品・売り上げのデータ化。
+                <a href='/jp/w-ec' target='_blank' rel='noreferrer'>
+                  W(ECサイト)
+                </a>
+                のコンテンツ管理及び利用者・商品・売り上げのデータ化。
               </p>
               <div className='wcms__top-options'>
                 <div className='wcms__top-option'>
@@ -116,7 +119,10 @@ const WCMSJP = () => {
                 <h3 className='wcms__points-title'>データのグラフ化</h3>
                 <div className='wcms__points-content'>
                   <div className='wcms__points-description'>
-                    <Link to='/'>W(仮想ECサイト)</Link>の様々なデータがグラフ化できます。
+                    <a href='/jp/w-ec' target='_blank' rel='noreferrer'>
+                      W(仮想ECサイト)
+                    </a>
+                    の様々なデータがグラフ化できます。
                     <br />
                     その例として以下のものがあります。
                     <br />
@@ -148,7 +154,11 @@ const WCMSJP = () => {
                 <h3 className='wcms__points-title'>コンテンツの管理</h3>
                 <div className='wcms__points-content'>
                   <p className='wcms__points-description'>
-                    商品やカテゴリーの追加・編集・削除ができ、別サイトの<Link to='/'>W</Link>に反映されます。
+                    商品やカテゴリーの追加・編集・削除ができ、
+                    <a href='/jp/w-ec' target='_blank' rel='noreferrer'>
+                      W(仮想ECサイト)
+                    </a>
+                    に反映されます。
                     <br />
                     <br />
                     しかし、ゲストユーザーとしてログインする場合（マスター以外）、商品・カテゴリーの追加はできますが、編集・削除をする権限がないため、それらの事はできない仕様になっています。
@@ -196,8 +206,16 @@ const WCMSJP = () => {
                   <p className='wcms__points-description'>
                     ユーザー認証はJWTを使用しています。
                     <br />
-                    <br />
                     それにより、マスター以外のアカウントでは製品・カテゴリーの編集・削除の制限をしています。
+                    <br />
+                    <br />
+                    以下のアカウント情報でゲストユーザーとしてログインできます。
+                    <br />
+                    <br />
+                    <ul>
+                      <li>Name: demo</li>
+                      <li>Password: password</li>
+                    </ul>
                   </p>
                   <div className='wcms__points-images'>
                     <img src={BgValFour} alt='' />
@@ -216,7 +234,7 @@ const WCMSJP = () => {
           </div>
           <div className='wcms__bottom'>
             <div className='wcms__bottom-buttons'>
-              <a href='/' target='_blank' className='wcms__bottom-button'>
+              <a href='https://pf-customer-data-client.vercel.app/login' target='/' rel='noreferrer' className='wcms__bottom-button'>
                 サイトを見る
               </a>
             </div>

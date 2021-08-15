@@ -1,12 +1,12 @@
 import ImgTop from '../../assets/img-project-03.png';
 import '../../styles/projects/WCMS.scss';
-// import ImgAuth from '../../assets/projects/wordbook/img-wordbook-auth.jpg';
+
 import ImgSave from '../../assets/projects/wordbook/img-wordbook-save.jpg';
 import ImgList from '../../assets/projects/wordbook/img-wordbook-list.jpg';
 import ImgTest from '../../assets/projects/wordbook/img-wordbook-test.jpg';
 import ImgSearch from '../../assets/projects/wordbook/img-wordbook-search.jpg';
 import ImgAuth from '../../assets/projects/wordbook/img-wordbook-auth.jpg';
-import { Link } from 'react-router-dom';
+
 import PageTop from '../../components/projects/PageTop';
 import Technology from '../../components/projects/Technology';
 import VisitButton from '../../components/projects/VisitButton';
@@ -121,7 +121,7 @@ const WordBook = () => {
       <br />
       <br />
       <ul>
-        <li>Username: admin@gmail.com</li>
+        <li>Email: admin@gmail.com</li>
         <li>Password: password</li>
       </ul>
     </div>
@@ -133,7 +133,7 @@ const WordBook = () => {
 
       <div className='l-container'>
         <div className='wcms'>
-          <PageTop title='W (e-commerce site)' description={pageTopDescription} sources={pageTopSources} image={ImgTop} />
+          <PageTop title='WordBook D' description={pageTopDescription} sources={pageTopSources} image={ImgTop} />
           <Technology front={technologyFront} back={technologyBack} />
           <div className='wcms__block is-bg'>
             <h2 className='wcms__block-title'>Functionalities</h2>

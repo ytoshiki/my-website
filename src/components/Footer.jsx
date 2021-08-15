@@ -1,4 +1,6 @@
 import '../styles/Footer.scss';
+import github from '../assets/github.svg';
+import linkedIn from '../assets/linkedIn.svg';
 
 const Footer = () => {
   return (
@@ -30,8 +32,22 @@ const Footer = () => {
             </span>
           </div>
           <div className='footer__right'>
+            <ul>
+              <li>
+                <a href='https://github.com/ytoshiki' target='_blank' rel='noreferrer'>
+                  <img src={github} alt='' />
+                </a>
+              </li>
+              <li>
+                <a href='https://www.linkedin.com/in/toshikiyoshioka' target='_blank' rel='noreferrer'>
+                  <img src={linkedIn} alt='' />
+                </a>
+              </li>
+            </ul>
             <span>
-              <a href='mailto:hnkc.ysoktsk@gmail.com'>Send me a message</a>
+              <a href='mailto:hnkc.ysoktsk@gmail.com' className='message'>
+                Send me a message
+              </a>
             </span>
           </div>
         </div>

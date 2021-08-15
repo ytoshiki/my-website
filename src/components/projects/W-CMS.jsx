@@ -37,9 +37,9 @@ const WCMS = () => {
               <h1 className='wcms__top-title'>W (content management system & data visualization)</h1>
               <p className='wcms__top-para'>
                 A platform for visualizing data collection and editing products and categories on{' '}
-                <Link to='/' target='/' rel='noreferrer'>
+                <a href='/w-ec' target='_blank' rel='noreferrer'>
                   W (EC site)
-                </Link>
+                </a>
                 .
               </p>
               <div className='wcms__top-options'>
@@ -120,7 +120,11 @@ const WCMS = () => {
                 <h3 className='wcms__points-title'>Data Visualization</h3>
                 <div className='wcms__points-content'>
                   <div className='wcms__points-description'>
-                    Visualize various kinds of information on <Link to='/'>W</Link> which is a virtual EC site.
+                    Visualize various kinds of information on{' '}
+                    <a href='/w-ec' target='_blank' rel='noreferrer'>
+                      W
+                    </a>{' '}
+                    which is a virtual EC site.
                     <br />
                     Here are some examples.
                     <br />
@@ -152,7 +156,11 @@ const WCMS = () => {
                 <h3 className='wcms__points-title'>Content Management</h3>
                 <div className='wcms__points-content'>
                   <p className='wcms__points-description'>
-                    You can add, edit, and delete products and categories that are reflected on <Link to='/'>W</Link>.
+                    You can add, edit, and delete products and categories that are reflected on{' '}
+                    <a href='/w-ec' target='_blank' rel='noreferrer'>
+                      W
+                    </a>
+                    .
                     <br />
                     <br />
                     However, if you log in as a demo user, you can add products and categories, but you cannot edit or delete them.
@@ -200,8 +208,16 @@ const WCMS = () => {
                   <p className='wcms__points-description'>
                     JWT is used for user authentication and authorization.
                     <br />
-                    <br />
                     It allows only the master user to edit or delete products and categories.
+                    <br />
+                    <br />
+                    You can use the following account information to sign in as a guest user.
+                    <br />
+                    <br />
+                    <ul>
+                      <li>Name: demo</li>
+                      <li>Password: password</li>
+                    </ul>
                   </p>
                   <div className='wcms__points-images'>
                     <img src={BgValFour} alt='' />
@@ -220,7 +236,7 @@ const WCMS = () => {
           </div>
           <div className='wcms__bottom'>
             <div className='wcms__bottom-buttons'>
-              <a href='/' target='_blank' className='wcms__bottom-button'>
+              <a href='https://pf-customer-data-client.vercel.app/login' target='_blank' className='wcms__bottom-button' rel='noreferrer'>
                 Visit Site
               </a>
             </div>

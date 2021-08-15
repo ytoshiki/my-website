@@ -68,7 +68,11 @@ const technologyBack = [
 const WECJP = () => {
   const pageTopDescription = (
     <p className='wcms__top-para'>
-      ECサイト。カテゴリー及び商品は別アプリ<Link to='/'>(W)</Link>からAPIで登録・所得が可能。
+      ECサイト。カテゴリー及び商品は{' '}
+      <a href='/jp/w-cms' target='_blank' rel='noreferrer'>
+        W
+      </a>
+      からAPIで登録・所得が可能。
     </p>
   );
 
@@ -78,9 +82,9 @@ const WECJP = () => {
       <br />
       <br />
       <ul>
-        <li>1. 商品の検索</li>
-        <li>2. カートの操作</li>
-        <li>3. 商品の並び替え</li>
+        <li>商品の検索</li>
+        <li>カートの操作</li>
+        <li>商品の並び替え</li>
       </ul>
       <br />
       <br />
@@ -108,10 +112,8 @@ const WECJP = () => {
       <br />
       <br />
       <ul>
-        <li>
-          <li>Username: demo</li>
-          <li>Password: password</li>
-        </li>
+        <li>Username: demo</li>
+        <li>Password: password</li>
       </ul>
     </div>
   );

@@ -51,7 +51,8 @@
         font-size: 0.95rem;
       }
       a {
-        color: rgb(114, 114, 114);
+        border-bottom: 1px solid #000;
+        color: #000;
       }
     }
 
@@ -67,9 +68,8 @@
       }
 
       a {
-        border-bottom: 2px solid #000;
+        border-bottom: 1px solid #000;
         color: #000;
-        font-weight: bold;
       }
       &:first-child {
         margin-bottom: 1rem;
@@ -191,6 +191,15 @@
 
       &.is-wide {
         width: 100%;
+      }
+
+      a {
+        border-bottom: 1px solid #000;
+        color: #000;
+      }
+
+      li {
+        list-style: inside disc;
       }
     }
 
