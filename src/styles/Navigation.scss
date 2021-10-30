@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400&display=swap');
 
 .navigation {
-  padding: 2rem 2rem;
+  padding: 1.2rem 0rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,6 +24,7 @@
 
     a {
       color: #000;
+      font-weight: bold;
     }
 
     @media screen and (max-width: 780px) {
@@ -43,25 +44,29 @@
       }
     }
     &:not(:last-child) {
-      margin-right: 1rem;
+      margin-right: 2rem;
 
       @media screen and (max-width: 780px) {
-        margin-right: 0.5rem;
+        margin-right: 1rem;
       }
     }
   }
 
   &__logo {
-    // font-family: 'Cedarville Cursive', cursive;
+    font-weight: bold;
     font-size: 1.3rem;
-    display: flex;
-    align-items: center;
+    letter-spacing: 0.1em;
+
+    a:visited {
+      color: black;
+    }
   }
 
   &__lang {
     display: flex;
     align-items: center;
     margin-left: 1.25rem;
+    font-weight: bold;
 
     @media screen and (max-width: 780px) {
       margin-left: 0;
@@ -69,6 +74,7 @@
     &-icon {
       font-size: 0.75rem;
       filter: drop-shadow(0 0 0.3rem rgb(199, 199, 199));
+      text-align: center;
 
       color: #000;
       @media screen and (max-width: 780px) {
@@ -79,7 +85,7 @@
         display: block;
         width: 1.4rem;
         margin: auto;
-        margin-bottom: 0.1rem;
+        margin-bottom: 0.2rem;
       }
     }
 
@@ -91,10 +97,6 @@
       @media screen and (max-width: 780px) {
         margin-left: 0.75rem;
       }
-    }
-
-    .is-jp {
-      font-family: 'Noto Sans JP', sans-serif;
     }
   }
 }

@@ -1,17 +1,33 @@
 .projects {
-  padding-top: 10rem;
+  padding-top: 6rem;
   padding-bottom: 10rem;
+  overflow: hidden;
 
   @media screen and (max-width: 1040px) {
     padding-top: 4rem;
     padding-bottom: 6rem;
   }
 
-  &__title {
-    text-align: center;
+  &__para {
     font-size: 1.4rem;
-    color: #a9a9a9;
-    margin-bottom: 4rem;
+    font-weight: bold;
+    margin-bottom: 8rem;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    position: relative;
+    &:after {
+      content: '';
+      height: 3px;
+      width: 60px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background: #000;
+    }
 
     @media screen and (max-width: 1040px) {
       font-size: 1rem;
@@ -67,7 +83,7 @@
     }
 
     &-title {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       margin-bottom: 1.5rem;
       line-height: 1.6;
       padding-top: 1rem;
@@ -78,7 +94,7 @@
       }
 
       span {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
 
         @media screen and (max-width: 780px) {
           font-size: 1rem;
@@ -88,7 +104,7 @@
 
     &-text {
       color: #6c757d;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       margin-bottom: 2rem;
 
       @media screen and (max-width: 780px) {
@@ -154,15 +170,15 @@
     border: none;
     font-size: 1rem;
     font-family: inherit;
-    color: #000;
+    color: #fff;
     border: 1.25px solid #000;
-    background: none;
+    background: #000;
     display: block;
     margin: auto;
     text-align: center;
     padding: 0.75rem 0;
     width: 100%;
-    max-width: 13rem;
+    max-width: 15rem;
 
     @media screen and (max-width: 780px) {
       padding: 0.5rem 0;

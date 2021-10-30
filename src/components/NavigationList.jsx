@@ -7,27 +7,10 @@ import { Link } from 'react-router-dom';
 const NavigationList = () => {
   return (
     <>
-      <motion.div
-        className='navigation__logo'
-        initial='hidden'
-        animate='visible'
-        transition={{ duration: 0.4, delay: 0.3 }}
-        variants={{
-          visible: { opacity: 1, x: 0 },
-          hidden: { opacity: 0, x: 20 }
-        }}
-      >
-        <div className='navigation__lang'>
-          <Link to='/jp' className='navigation__lang-icon is-jp'>
-            <img src={Jp} alt='' />
-            日本語
-          </Link>
-          <Link to='/' className='navigation__lang-icon is-en'>
-            <img src={En} alt='' />
-            English
-          </Link>
-        </div>
+      <motion.div className='navigation__logo'>
+        <Link to='/'>T.Y.</Link>
       </motion.div>
+
       <ul className='navigation__list'>
         <motion.li
           className='navigation__item'
@@ -39,10 +22,7 @@ const NavigationList = () => {
             hidden: { opacity: 0, x: 20 }
           }}
         >
-          <a href='#projects'>
-            <span> {'<'} </span>
-            Projects <span> {'/>'}</span>
-          </a>
+          <a href='#projects'>Projects</a>
         </motion.li>
 
         <motion.li
@@ -56,10 +36,19 @@ const NavigationList = () => {
           }}
         >
           <a href='https://www.linkedin.com/in/toshikiyoshioka' target='_blank' rel='noreferrer'>
-            <span> {'<'}</span> About <span> {'/>'}</span>
+            About
           </a>
         </motion.li>
       </ul>
+
+      <div className='navigation__lang'>
+        <Link to='/jp' className='navigation__lang-icon is-jp'>
+          <img src={Jp} alt='' />
+        </Link>
+        <Link to='/' className='navigation__lang-icon is-en'>
+          <img src={En} alt='' />
+        </Link>
+      </div>
     </>
   );
 };

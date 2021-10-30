@@ -1,33 +1,64 @@
 .top {
+  color: #fff;
+  &-wrapper {
+    position: relative;
+    height: 40rem;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: calc(100% + 300px);
+      height: 100%;
+      background: url('../assets/main-visual.jpg');
+      filter: blur(50px);
+      margin: -50px;
+
+      animation-name: bg-circle;
+      animation-duration: 10s;
+      animation-iteration-count: infinite;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($color: #000000, $alpha: 0.3);
+    }
+  }
+
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-  padding-bottom: 5rem;
-  border-bottom: 1px solid #ddd;
+  height: 100%;
+  padding: 0 4rem;
 
   @media screen and (max-width: 780px) {
-    margin-top: 2rem;
     padding-bottom: 3rem;
   }
 
   &__left {
     width: 100%;
-    max-width: 576px;
+    max-width: 900px;
     margin: auto;
-
     @media screen and (max-width: 780px) {
     }
   }
 
   &__name {
-    font-size: 2rem;
+    font-size: 2.6rem;
     margin-bottom: 1rem;
     cursor: pointer;
 
     @media screen and (max-width: 780px) {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
 
     span {
@@ -59,7 +90,7 @@
   }
 
   &__title {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-bottom: 2rem;
 
     @media screen and (max-width: 780px) {
@@ -97,5 +128,19 @@
     @media screen and (max-width: 780px) {
       max-width: 35rem;
     }
+  }
+}
+
+@keyframes bg-circle {
+  0% {
+    transform: scale(2);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(2);
   }
 }
