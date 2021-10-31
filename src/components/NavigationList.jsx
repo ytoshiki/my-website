@@ -24,21 +24,6 @@ const NavigationList = () => {
         >
           <a href='#projects'>Projects</a>
         </motion.li>
-
-        <motion.li
-          className='navigation__item'
-          initial='hidden'
-          animate='visible'
-          transition={{ duration: 0.4, delay: 0.7 }}
-          variants={{
-            visible: { opacity: 1, x: 0 },
-            hidden: { opacity: 0, x: 20 }
-          }}
-        >
-          <a href='https://www.linkedin.com/in/toshikiyoshioka' target='_blank' rel='noreferrer'>
-            About
-          </a>
-        </motion.li>
       </ul>
 
       <div className='navigation__lang'>

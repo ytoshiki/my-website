@@ -7,7 +7,7 @@
   justify-content: space-between;
 
   @media screen and (max-width: 780px) {
-    padding: 1.75rem 0;
+    padding: 1rem 0;
   }
 
   &__list {
@@ -25,6 +25,11 @@
     a {
       color: #000;
       font-weight: bold;
+      transition: all ease 0.2s;
+
+      &:hover {
+        opacity: 0.7;
+      }
     }
 
     @media screen and (max-width: 780px) {
@@ -57,6 +62,12 @@
     font-size: 1.3rem;
     letter-spacing: 0.1em;
 
+    transition: all ease 0.2s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
     a:visited {
       color: black;
     }
@@ -71,12 +82,17 @@
     @media screen and (max-width: 780px) {
       margin-left: 0;
     }
+
     &-icon {
       font-size: 0.75rem;
-      filter: drop-shadow(0 0 0.3rem rgb(199, 199, 199));
+      filter: drop-shadow(0 0 0.4rem rgba(0, 0, 0, 0.2));
       text-align: center;
-
       color: #000;
+      transition: all ease 0.2s;
+
+      &:hover {
+        opacity: 0.7;
+      }
       @media screen and (max-width: 780px) {
         font-size: 0.6rem;
       }

@@ -11,7 +11,7 @@ body {
   font-size: 62.5%;
   font-family: 'Poppins', sans-serif;
 
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   // background-image: #fff;
 }
 
@@ -35,6 +35,10 @@ body {
   max-width: 1400px;
   margin: auto;
   overflow: hidden;
+
+  @media screen and (max-width: 1040px) {
+    padding: 0 1rem;
+  }
 }
 
 img {
@@ -51,10 +55,6 @@ li {
 }
 
 .lang-jp {
-  .top {
-    font-family: 'Noto Sans JP', sans-serif;
-  }
-
   .projects {
     font-family: 'Noto Sans JP', sans-serif;
 

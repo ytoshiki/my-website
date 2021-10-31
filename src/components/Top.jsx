@@ -1,5 +1,3 @@
-import TopImage from '../assets/img-main.png';
-import ImgJs from '../assets/js.png';
 import { motion } from 'framer-motion';
 
 import '../styles/Top.scss';
