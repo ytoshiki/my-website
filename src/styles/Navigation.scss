@@ -60,7 +60,7 @@
   &__logo {
     font-weight: bold;
     font-size: 1.3rem;
-    letter-spacing: 0.1em;
+    letter-spacing: 0;
 
     transition: all ease 0.2s;
 
@@ -68,8 +68,8 @@
       opacity: 0.7;
     }
 
-    a:visited {
-      color: black;
+    a {
+      color: #000 !important;
     }
   }
 
