@@ -1,17 +1,20 @@
-import FadeIn from '../components/animation/FadeIn';
+import Fade from '../components/animation/Fade';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
+import ProgressBar from '../components/ProgressBar';
 import Projects from '../components/Projects';
 import Top from '../components/Top';
 
 const Home = () => {
   return (
-    <FadeIn>
+    <Fade>
+      <ProgressBar/>
       <Header />
       <Top />
       <Projects />
       <Footer />
-    </FadeIn>
+      </Fade>
+
   );
 };
 

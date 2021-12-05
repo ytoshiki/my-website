@@ -11,6 +11,7 @@
 body {
   font-size: 62.5%;
   font-family: 'Poppins', sans-serif;
+  padding-top: 1rem;
 
   background-color: rgb(255, 255, 255);
   // background-image: #fff;
@@ -33,7 +34,7 @@ body {
 .l-container {
   width: 100%;
   padding: 0 1.6rem;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: auto;
   overflow: hidden;
 
@@ -41,6 +42,8 @@ body {
     padding: 0 1rem;
   }
 }
+
+
 
 img {
   display: block;

@@ -1,159 +1,113 @@
 .top {
-  color: #fff;
+  z-index: 999;
+  position: relative;
+
+  &__card {
+    width: 360px;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding-top: 25px;
+  cursor: pointer;
+  justify-content: space-between;
+  padding-bottom: 10px;
+
+  &-header {
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+  &-avatar {
+    width: 100px;
+  height: 100px;
+  position: relative;
+  margin-bottom: 10px;
+
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  }
+
+
+  &-indicator {
+    width: 15px;
+  height: 15px;
+  background-color: #53f45a;
+  position: absolute;
+  bottom: 10px;
+  right: 8px;
+  border-radius: 50%;
+  z-index: 4;
+  }
+
+  &-footer {
+    margin: 0 auto;
+    display: flex;
+    padding: .75rem 0 0 0;
+    align-items: center;
+  }
+
+  &-btn  {
+    width: 40px;
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    font-size: 23px;
+    margin: 0 20px;
+  }
+  }
 
   &-wrapper {
     position: relative;
-    height: 40rem;
+    // padding: 5rem 0 8rem;
+    padding: 8rem 0 12rem;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
 
     @media screen and (max-width: 780px) {
       height: 28rem;
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: calc(100% + 100px);
-      height: calc(100% + 100px);
-      background: url('../assets/main-visual.jpg');
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat;
-      filter: blur(30px);
-      animation-name: bg-circle;
-      animation-duration: 6s;
-      animation-iteration-count: infinite;
-
-      @media screen and (max-width: 780px) {
-        width: 100%;
-        height: 100%;
-      }
+  }
+ 
+  &__profile {
+    text-align: center;
+    &-name {
+      font-size: 28px;
+  font-weight: 500;
     }
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba($color: #000000, $alpha: 0.3);
+
+    &-role {
+      color: #6d6d6d;
+      font-size: 16px;
     }
   }
 
-  position: absolute;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding: 0 4rem;
-
-  @media screen and (max-width: 780px) {
-    padding: 3rem 1rem 0;
-    align-items: flex-start;
-  }
-
-  &__left {
-    width: 100%;
-    max-width: 900px;
-
-    @media screen and (max-width: 780px) {
-    }
-  }
-
-  &__name {
-    font-size: 2.6rem;
-    margin-bottom: 1rem;
-    cursor: pointer;
-
-    @media screen and (max-width: 780px) {
-      font-size: 1.8rem;
-      line-height: 1.3;
-    }
-
-    span {
-      transition: all ease 0.3s;
-      position: relative;
-      padding-left: 0.3rem;
-      display: inline-block;
-    }
-    &:hover {
-      span {
-        transform: rotate(15deg);
-      }
-    }
-  }
-
-  &__sub-title {
-    span {
-      position: relative;
-      display: inline-block;
-      padding-right: 2rem;
-      transition: all ease 0.2s;
-    }
-
-    &:hover {
-      span {
-        transform: translateX(1rem);
-      }
-    }
-  }
-
-  &__title {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-
-    @media screen and (max-width: 780px) {
-      font-size: 1.2rem;
-    }
-
-    span {
-      display: inline-block;
-      font-weight: bold;
-
-      img {
-        width: 2.2rem;
-        display: inline-block;
-
-        @media screen and (max-width: 1040px) {
-          width: 2.4rem;
-        }
-
-        @media screen and (max-width: 780px) {
-          width: 1.8rem;
-        }
-      }
-    }
-  }
-
-  &__right {
+  &__content {
+    display: flex;
+    justify-content: center;
     margin-bottom: 3rem;
   }
 
-  &__image {
-    width: 100%;
-    max-width: 40rem;
-    padding: 0 1rem;
 
-    @media screen and (max-width: 780px) {
-      max-width: 35rem;
-    }
-  }
-}
-
-@keyframes bg-circle {
-  0% {
-    transform: scale(2.2);
+  &__about {
+    font-size: 1.3rem;
+    width: 70%;
+    margin: auto;
   }
 
-  50% {
-    transform: scale(1);
+  &__indicator {
+   
   }
 
-  100% {
-    transform: scale(2.2);
-  }
 }

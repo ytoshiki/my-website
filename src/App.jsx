@@ -17,7 +17,7 @@ const App = () => {
   const location = useLocation();
 
   return (
-    <AnimatePresence exitBeforeEnter initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
+    <AnimatePresence exitBeforeEnter initial={true} onExitComplete={() => window.scrollTo(0, 0)}>
       <Switch location={location} key={location.pathname}>
         <Route path='/' exact component={Home} />
         <Route path='/w-cms' component={WCMS} />

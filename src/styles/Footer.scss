@@ -1,11 +1,11 @@
 .footer {
-  padding: 2rem 0;
-
+  padding: 1rem 0;
+  background: #000000;
+  color: #fff;
   &__inner {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    border-top: 1px solid #000;
     font-size: 1rem;
     letter-spacing: 0;
     font-weight: bold;
@@ -43,14 +43,14 @@
       a {
         text-decoration: none;
         border-bottom: none;
-        color: #000 !important;
         transition: all ease 0.2s;
+        color: #fff !important;
 
         &:hover {
           opacity: 0.7;
         }
         &:visited {
-          color: #000;
+          color: #fff !important;
         }
       }
     }
