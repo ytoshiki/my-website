@@ -4,42 +4,36 @@ import En from '../assets/en.png';
 
 import { Link } from 'react-router-dom';
 
-const NavigationList = () => {
+const NavigationList = ({lang}) => {
   return (
     <>
-      <motion.div className='navigation__logo'>
+      <div className='navigation__logo'>
         <Link to='/'>T.Y.</Link>
-      </motion.div>
+      </div>
 
       <ul className='navigation__list'>
-        <motion.li
+        <li
           className='navigation__item'
-          initial='hidden'
-          animate='visible'
-          transition={{ duration: 0.4, delay: 0.5 }}
-          variants={{
-            visible: { opacity: 1, x: 0 },
-            hidden: { opacity: 0, x: 20 }
-          }}
+          
         >
-          <a href='#projects'>Projects</a>
-        </motion.li>
-        <motion.li
+          <a href='#projects'>{lang == "jp" ? "制作物" : "Projects"}</a>
+        </li>
+        <li
           className='navigation__item'
-          initial='hidden'
-          animate='visible'
-          transition={{ duration: 0.4, delay: 0.5 }}
-          variants={{
-            visible: { opacity: 1, x: 0 },
-            hidden: { opacity: 0, x: 20 }
-          }}
+          
         >
-          <a href='#projects'>Blog</a>
-        </motion.li>
+          <a href='#projects'>{lang == "jp" ? "ブログ" : "Blog"}</a>
+        </li>
+        <li
+          className='navigation__item'
+          
+        >
+          <a href='#projects'>{lang == "jp" ? "私について" : "About"}</a>
+        </li>
    
       </ul> 
 
-      <div className='navigation__lang'>
+      <div className='navigation__lang' >
         <Link to='/jp' className='navigation__lang-icon is-jp'>
           <img src={Jp} alt='' />
         </Link>

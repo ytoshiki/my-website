@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import githubIcon from "../assets/github.svg";
+import profileImage from "../assets/profile.jpeg";
 import devComminityIcon from "../assets/dev-community.svg";
 import '../styles/Top.scss';
 
@@ -9,11 +10,12 @@ const Top = () => {
       <div className='top-wrapper'>
         <div className='top'>
         
+        
         <div className="top__content">
         <motion.div className="top__card"
-        initial={{y: 40, opacity: 0}}
-        animate={{y: 0, opacity: 1}}
-        transition={{duration: .5, delay: 1}}
+        initial={{ opacity: 0}}
+        animate={{ opacity: 1}}
+        transition={{duration: .5, delay: .5}}
         >
               <div className="top__card-header">
                 <div className="top__card-avatar">
@@ -22,7 +24,7 @@ const Top = () => {
         transition={{duration: 1, delay: 2}}></motion.div>
                   <motion.img initial={{y: 20, opacity: 0}}
         animate={{y: 0, opacity: 1}}
-        transition={{duration: .5, delay: 1.2}} src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="" />
+        transition={{duration: .5, delay: 1.2}} src={profileImage} alt="" />
                 </div>
                 <div className="top__profile">
                   <motion.div initial={{y: 20, opacity: 0}}

@@ -9,7 +9,7 @@ const Header = ({ hasParent, lang }) => {
       {lang ? '戻る' : 'Back'}
     </Link>
   ) : (
-    <Navigation />
+    <Navigation lang={lang}/>
   );
   return <header style={{ position: 'relative' }}>{renderNavigation}</header>;
 };

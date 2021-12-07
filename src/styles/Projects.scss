@@ -1,5 +1,7 @@
 .projects {
+  padding-top: 4rem;
   padding-bottom: 10rem;
+  background: #fafafa;
   overflow: hidden;
 
   @media screen and (max-width: 1040px) {
@@ -20,7 +22,7 @@
 
   &__title {
     font-size: 1.8rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     padding-bottom: .75rem;
     position: relative;
     text-align: center;
